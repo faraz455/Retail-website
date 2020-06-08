@@ -1,0 +1,9 @@
+/*Desktop view */
+@media only screen and (min-width: 800px) {
+.left1{
+    padding-left: 60px;
+}
+.left2{
+    padding-left: 20px;
+}
+}
