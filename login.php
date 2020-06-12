@@ -3,46 +3,51 @@
 
 <head>
     <title>Retail Property</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="main.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="main.js"></script>
 </head>
 <body>
   <div style="background-color: rgb(240, 238, 238); padding-bottom: 10%;"> 
+
+
   <?php
 require_once('navbar.html');
   ?>
- 
 <!--///////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-<!--<div class="container">
-    <div class="page-header">
-        <h1>Welcome back!</h1>
+<div class="container padd-top" style="padding-top: 9%; padding-left: 20%;  text-align: center;  height: 800px;   " >
+
+    <!--row 1-->
+    <div class="row size" style=" background-color: cadetblue; ">   
+        <button type="button" id="btn1" onclick="this.style.backgroundColor = 'rgb(28, 68, 70)'; document.getElementById('btn2').style.backgroundColor = 'rgb(40, 122, 122)'" class="col-sm btn btn-primary" style=" margin: 1px;background-color: rgb(28, 68, 70)">User</button>
+        <button type="button" id="btn2" onclick="this.style.backgroundColor = 'rgb(28, 68, 70)'; document.getElementById('btn1').style.backgroundColor = 'rgb(40, 122, 122)'" class="col-sm btn btn-primary" class="col-sm btn btn-primary" style=" margin: 1px;background-color: rgb(40, 122, 122);">Admin</button>
     </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="panel with-nav-tabs panel-info">
-                <div class="panel-heading">
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a href="#tab1info" data-toggle="tab">User</a></li>
-                            <li><a href="#tab2info" data-toggle="tab">Admin</a></li>
-                        </ul>
-                </div>
-                <div class="panel-body">
-                    <div class="tab-content">
-                        <div class="tab-pane fade in active" id="tab1info">Info 1</div>
-                        <div class="tab-pane fade" id="tab2info">Info 2</div>
-                    </div>
-                </div>
-            </div>
+  
+    <!--row 2-->
+  <div class="row size" style="  padding-top: 4%;background-color: cadetblue;">
+    <div class="input-group mb-3" style="width: 60%; margin: auto;">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1"><i class="fa fa-user icon"></i></span>
         </div>
-	</div>
-</div>--s>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+  </div>
 
+  <div class="row size" style=" background-color: cadetblue;">
+    <div class="input-group mb-3" style="width: 60%; margin: auto;">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1"><i class="fa fa-key icon"></i></span>
+        </div>
+        <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
+    </div>
+  </div>
 
-<div>
+  <div class="row size" style=" background-color: cadetblue;">
+    <div class="input-group mb-3" style="width: 60%; margin-left: 35%;">
+        <button type="button" class="btn btn-success" style="width: 50%;">Login</button>
+    </div>
+  </div>
 
-</div>-->
+</div>
 
     <!--main div ends-->
 </div>
