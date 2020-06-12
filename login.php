@@ -7,19 +7,19 @@
     <script src="main.js"></script>
 </head>
 <body>
-  <div style="background-color: rgb(240, 238, 238); padding-bottom: 10%;"> 
+  <div style="background-color: rgb(211, 206, 206); padding-bottom: 10%;"> 
 
 
   <?php
 require_once('navbar.html');
   ?>
 <!--///////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-<div class="container padd-top" style="padding-top: 9%; padding-left: 20%;  text-align: center;  height: 800px;   " >
+<div class="container" style="padding-top: 9%; padding-left: 20%;  text-align: center;  height: 800px; ;" >
 
     <!--row 1-->
-    <div class="row size" style=" background-color: cadetblue; ">   
-        <button type="button" id="btn1" onclick="this.style.backgroundColor = 'rgb(28, 68, 70)'; document.getElementById('btn2').style.backgroundColor = 'rgb(40, 122, 122)'" class="col-sm btn btn-primary" style=" margin: 1px;background-color: rgb(28, 68, 70)">User</button>
-        <button type="button" id="btn2" onclick="this.style.backgroundColor = 'rgb(28, 68, 70)'; document.getElementById('btn1').style.backgroundColor = 'rgb(40, 122, 122)'" class="col-sm btn btn-primary" class="col-sm btn btn-primary" style=" margin: 1px;background-color: rgb(40, 122, 122);">Admin</button>
+    <div class="row size" style=" background-color: cadetblue; border-top-left-radius: 15px; border-top-right-radius: 15px;  ">   
+        <button type="button" id="btn1" onclick="this.style.backgroundColor = 'rgb(28, 68, 70)'; document.getElementById('btn2').style.backgroundColor = 'rgb(40, 122, 122)'" class="col-sm btn btn-primary" style=" margin: 1px;background-color: rgb(28, 68, 70); border-top-left-radius: 15px;">User</button>
+        <button type="button" id="btn2" onclick="this.style.backgroundColor = 'rgb(28, 68, 70)'; document.getElementById('btn1').style.backgroundColor = 'rgb(40, 122, 122)'" class="col-sm btn btn-primary" class="col-sm btn btn-primary" style=" margin: 1px;background-color: rgb(40, 122, 122);border-top-right-radius: 15px;">Admin</button>
     </div>
   
     <!--row 2-->
@@ -41,7 +41,7 @@ require_once('navbar.html');
     </div>
   </div>
 
-  <div class="row size" style=" background-color: cadetblue;">
+  <div class="row size" style=" background-color: cadetblue; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px; ">
     <div class="input-group mb-3" style="width: 60%; margin-left: 35%;">
         <button type="button" class="btn btn-success" style="width: 50%;">Login</button>
     </div>
