@@ -5,6 +5,7 @@
     <title>Retail Property</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="main.js"></script>
+    
 </head>
 <body>
   <div style="background-color: rgb(211, 206, 206); padding-bottom: 10%;"> 
@@ -18,8 +19,8 @@ require_once('navbar.html');
 
     <!--row 1-->
     <div class="row size" style=" background-color: cadetblue; border-top-left-radius: 15px; border-top-right-radius: 15px;  ">   
-        <button type="button" id="btn1" onclick="this.style.backgroundColor = 'rgb(28, 68, 70)'; document.getElementById('btn2').style.backgroundColor = 'rgb(40, 122, 122)'" class="col-sm btn btn-primary" style=" margin: 1px;background-color: rgb(28, 68, 70); border-top-left-radius: 15px;">User</button>
-        <button type="button" id="btn2" onclick="this.style.backgroundColor = 'rgb(28, 68, 70)'; document.getElementById('btn1').style.backgroundColor = 'rgb(40, 122, 122)'" class="col-sm btn btn-primary" class="col-sm btn btn-primary" style=" margin: 1px;background-color: rgb(40, 122, 122);border-top-right-radius: 15px;">Admin</button>
+        <button type="button" id="btn1" onclick="this.style.backgroundColor = 'rgb(28, 68, 70)'; document.getElementById('btn2').style.backgroundColor = 'rgb(40, 122, 122)'" class="col-sm btn btn-dark" style=" margin: 1px;background-color: rgb(28, 68, 70); border-top-left-radius: 15px;">User</button>
+        <button type="button" id="btn2" onclick="this.style.backgroundColor = 'rgb(28, 68, 70)'; document.getElementById('btn1').style.backgroundColor = 'rgb(40, 122, 122)'" class="col-sm btn btn-dark" class="col-sm btn btn-primary" style=" margin: 1px;background-color: rgb(40, 122, 122);border-top-right-radius: 15px;">Admin</button>
     </div>
   
     <!--row 2-->
@@ -48,7 +49,6 @@ require_once('navbar.html');
   </div>
 
 </div>
-
     <!--main div ends-->
 </div>
 
