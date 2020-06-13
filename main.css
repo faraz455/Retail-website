@@ -10,8 +10,7 @@
     padding: 10px;
    text-align: center;
   }
-
-/*Desktop view */
+ /*Desktop view */
 @media only screen and (min-width: 800px) {
 .left1{
     padding-left: 60px;
@@ -27,15 +26,30 @@
 }
 .size{
   width: 60%;
-
+}
+.size2{
+  width: 60%;
 }
 }
 @media (min-width: 481px) and (max-width: 799px) {
-
+.size{
+  width: 80%;
+}
+.size2{
+  width: 80%;
+}
+.hide-t{
+  display: none;
+}
 }
 @media  (max-width: 430px) {
   .size{
     width: 100%;
   }
-
+  .size2{
+    width: 90%;
+  }
+  .hide-m{
+    display: none;
+  }
 }
