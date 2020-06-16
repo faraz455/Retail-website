@@ -10,6 +10,7 @@ include_once("connect.php");
     <title>Retail Property</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="main.js"></script>
 </head>
 <body>
   <div style="background-color: rgb(240, 238, 238); padding-bottom: 10%;"> 
@@ -70,6 +71,7 @@ require_once('navbar.html');
                     <span class="input-group-text" id="basic-addon1"><i class="fa fa-key icon"></i></span>
                 </div>
                 <input type="password" class="form-control" placeholder="Confirm Password" name = "c_password" aria-label="Password" aria-describedby="basic-addon1">
+                <span id='message'></span>
             </div>
         </div>
 
@@ -257,7 +259,7 @@ if(isset($_POST['signup'])) {
             //user exist
             if($res['user_name'] == $user_name || $res['email'] == $email ){
                 $flag2=1;
-        }
+        }}}
     if($password != $c_password){
         $flag3 =1;
     }
