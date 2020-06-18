@@ -8,5 +8,11 @@ $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $d
 
 // initialize loggedIn if it doesn't already exist
 if (!isset($_SESSION['loggedIn']))
-    $_SESSION['loggedIn'] = 0;
+    {$_SESSION['loggedIn'] = 0;}
+if(!isset($_SESSION['login_user'])){
+    $_SESSION['login_user'] = "";
+}
+if (!isset($_SESSION ['check'])){
+    $_SESSION ['check'] = 0;
+  }
 ?>
