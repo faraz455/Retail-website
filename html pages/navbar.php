@@ -1,3 +1,9 @@
+<?php
+session_start();
+//including the database connection file
+include_once("connect.php");
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -40,12 +46,15 @@
                 <a class="dropdown-item" href="#">Category3</a>
               </div>
             </li>
-            <li class="nav-item left3">
-                <a class="nav-link" href="signup.php">Sign In</a>
-            </li>
-            <li class="nav-item left4">
-                <a class="nav-link" href="login.php">Login</a>
-            </li>
+            <?php 
+            if ($_SESSION['loggedIn'] == 0)
+            {echo'<li class="nav-item left3">
+                    <a class="nav-link" href="signup.php">Sign In</a>
+                </li>
+                <li class="nav-item left4">
+                    <a class="nav-link" href="login.php">Login</a>
+                </li>';}
+            ?>
           </ul>
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
