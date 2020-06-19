@@ -1,5 +1,4 @@
 <?php
-session_start();
 //including the database connection file
 include_once("connect.php");
 ?>
@@ -13,7 +12,7 @@ include_once("connect.php");
 
 <body>
   <div style="background-color: rgb(211, 206, 206); padding-bottom: 10%;"> 
-  <?php require_once('navbar.html'); ?>
+  <?php require_once('navbar.php'); ?>
 
 <!--///////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 
@@ -21,8 +20,8 @@ include_once("connect.php");
 
     <!--row 1-->
     <div class="row size" style=" background-color: cadetblue; border-top-left-radius: 15px; border-top-right-radius: 15px;  ">   
-      <button  class="col-sm btn btn-dark" style=" margin: 1px;background-color: rgb(28, 68, 70); border-top-left-radius: 15px;"><a style="text-decoration: none; color: white;" href = "login.php">User</a></button>
-      <button class="col-sm btn btn-dark" class="col-sm btn btn-primary" style="  margin: 1px;background-color: rgb(40, 122, 122);border-top-right-radius: 15px;"><a style="text-decoration: none; color: white;" href = "login2.php">Admin</a></button>
+      <button  class="col-sm btn btn-dark" style=" margin: 1px;background-color: rgb(28, 68, 70); border-top-left-radius: 15px;"><a style="text-decoration: none; color: white; letter-spacing: 5px; " href = "login.php">User</a></button>
+      <button class="col-sm btn btn-dark" class="col-sm btn btn-primary" style="  margin: 1px;background-color: rgb(40, 122, 122);border-top-right-radius: 15px;"><a style=" letter-spacing: 5px; text-decoration: none; color: white;" href = "login2.php">Admin</a></button>
     </div>
 
     <form action="login.php" method="post" name="form">

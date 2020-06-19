@@ -1,3 +1,7 @@
+<?php
+//including the database connection file
+include_once("connect.php");
+?>
 <!DOCTYPE html>
 <html>
 
@@ -7,7 +11,7 @@
 <body>
   <div style="background-color: rgb(240, 238, 238); padding-bottom: 10%;"> 
 <?php
-require_once('navbar.html');
+require_once('navbar.php');
 ?>
 
 <!--row 1-->

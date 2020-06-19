@@ -1,5 +1,4 @@
 <?php
-session_start();
 //including the database connection file
 include_once("connect.php");
 ?>
@@ -14,7 +13,7 @@ include_once("connect.php");
 <body>
   <div style="background-color: rgb(240, 238, 238); padding-bottom: 10%;"> 
 <?php
-require_once('navbar.html');
+require_once('navbar.php');
 ?>
 
 
