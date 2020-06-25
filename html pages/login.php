@@ -20,8 +20,8 @@ include_once("connect.php");
 
     <!--row 1-->
     <div class="row size" style=" background-color: cadetblue; border-top-left-radius: 15px; border-top-right-radius: 15px;  ">   
-      <button  class="col-sm btn btn-dark" style=" margin: 1px;background-color: rgb(28, 68, 70); border-top-left-radius: 15px;"><a style="text-decoration: none; color: white; letter-spacing: 5px; " href = "login.php">User</a></button>
-      <button class="col-sm btn btn-dark" class="col-sm btn btn-primary" style="  margin: 1px;background-color: rgb(40, 122, 122);border-top-right-radius: 15px;"><a style=" letter-spacing: 5px; text-decoration: none; color: white;" href = "login2.php">Admin</a></button>
+      <button onclick="window.location.href='login.php'"  class="col-sm btn btn-dark" style="border-radius: 15px; margin: 1px;background-color: rgb(28, 68, 70); border-top-left-radius: 15px; color: white; letter-spacing: 5px;">User</button>
+      <button onclick="window.location.href='login2.php'" class="col-sm btn btn-dark" style=" border-radius: 15px; margin: 1px;background-color: rgb(40, 122, 122);border-top-right-radius: 15px;letter-spacing: 5px; color: white;">Admin</button>
     </div>
 
     <form action="login.php" method="post" name="form">
@@ -55,7 +55,7 @@ include_once("connect.php");
 $result = mysqli_query($mysqli, "SELECT * FROM user_info "); 
 $error=1;
 
-if(isset($_POST['login']) && $_SESSION['loggedIn'] == 0) {	
+if(isset($_POST['login']) && $_SESSION['logIn'] == 0) {	
   $user_name = mysqli_real_escape_string($mysqli, $_POST['user_name']);
   $password = mysqli_real_escape_string($mysqli, $_POST['password']);
 
@@ -63,7 +63,7 @@ if(isset($_POST['login']) && $_SESSION['loggedIn'] == 0) {
       if($res['user_name'] == $user_name ){
         if($res['password'] == $password){
           echo "user logged in";
-          $_SESSION['loggedIn'] = 1;
+          $_SESSION['logIn'] = 1;
           $_SESSION['login_user'] = $user_name;
           $error = 0;
         }
@@ -71,7 +71,7 @@ if(isset($_POST['login']) && $_SESSION['loggedIn'] == 0) {
       }
     }
         
-  if($error == 1 && $_SESSION['loggedIn'] == 0 ){
+  if($error == 1 && $_SESSION['logIn'] == 0 ){
         echo "User incorrect";
   } 
       $mysqli->close();
