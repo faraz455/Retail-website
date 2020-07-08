@@ -19,6 +19,7 @@ include_once("connect.php");
 
 </head>
 <body>
+<div style="background-color: rgb(211, 206, 206); padding-bottom: 10%;"> 
   <nav class="navbar navbar-expand-lg navbar-dark  bg-dark">
 
         <a class="navbar-brand" href="main.php" style="color: rgb(71, 160, 160); font-family: Bahnschrift;letter-spacing: 2.5px;">Retail Property</a>
@@ -47,13 +48,27 @@ include_once("connect.php");
               </div>
             </li>
             <?php 
-            if ($_SESSION['loggedIn'] == 0)
+            if ($_SESSION['logIn'] == 0)
             {echo'<li class="nav-item left3">
                     <a class="nav-link" href="signup.php">Sign In</a>
                 </li>
                 <li class="nav-item left4">
                     <a class="nav-link" href="login.php">Login</a>
                 </li>';}
+            else{echo'<form action="navbar.php" method="post" name="form">
+                <li class="nav-item left3">
+                     <input class="form-control" style = "border: none ;background-color:rgb(39, 33, 77); color:rgb(71, 160, 160);" name = "logout" type = "submit" value = "logout">
+                  </li>
+                  <li class="nav-item left4">
+                     <a class="nav-link"></a>
+                 </li></form>';}
+
+
+                if (isset($_POST['logout']))
+                { $_SESSION['logIn'] = 0;
+                 $_SESSION['login_User'] = "";
+                 header("Location: login.php");
+                $mysqli->close();}
             ?>
           </ul>
           <form class="form-inline my-2 my-lg-0">

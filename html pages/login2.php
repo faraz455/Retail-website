@@ -1,7 +1,3 @@
-<?php
-//including the database connection file
-include_once("connect.php");
-?>
 <!DOCTYPE html>
 <html>
 
@@ -11,9 +7,33 @@ include_once("connect.php");
 </head>
 <body>
   <div style="background-color: rgb(211, 206, 206); padding-bottom: 10%;"> 
-  <?php require_once('navbar.php'); ?>
+  <?php require_once('navbar.php'); 
+  
+  $result = mysqli_query($mysqli, "SELECT * FROM admin_info "); 
+$error=1;
 
+if(isset($_POST['login']) && $_SESSION['logIn'] == 0) {	
+  $user_name = mysqli_real_escape_string($mysqli, $_POST['user_name']);
+  $password = mysqli_real_escape_string($mysqli, $_POST['password']);
 
+    while($res = mysqli_fetch_array($result)) { 
+      if($res['admin_name'] == $user_name ){
+        if($res['password'] == $password){
+          $_SESSION['logIn'] = 1;
+          $_SESSION['login_User'] = $user_name;
+          $error = 0;
+          header("Location: main.php");
+        }
+      break;
+      }
+    }
+        
+  if($error == 1 && $_SESSION['logIn'] == 0 ){
+        echo "User incorrect";
+  } 
+      $mysqli->close();
+}
+  ?>
 
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 
@@ -32,7 +52,7 @@ include_once("connect.php");
         <div class="input-group-prepend">
           <span class="input-group-text" id="basic-addon1"><i class="fa fa-user icon"></i></span>
         </div>
-        <input type="text" class="form-control" placeholder="Username" name = "user_name" aria-label="Username" aria-describedby="basic-addon1">
+        <input type="text" class="form-control" placeholder="Username" name = "user_name" aria-label="Username" aria-describedby="basic-addon1" required>
       </div>
   </div>
 
@@ -41,7 +61,7 @@ include_once("connect.php");
         <div class="input-group-prepend">
           <span class="input-group-text" id="basic-addon1"><i class="fa fa-key icon"></i></span>
         </div>
-        <input type="password" class="form-control" placeholder="Password" name = "password" aria-label="Password" aria-describedby="basic-addon1">
+        <input type="password" class="form-control" placeholder="Password" name = "password" aria-label="Password" aria-describedby="basic-addon1" required>
     </div>
   </div>
 
@@ -51,33 +71,7 @@ include_once("connect.php");
     </div>
   </div>
 </form>
-<?php
 
-$result = mysqli_query($mysqli, "SELECT * FROM admin_info "); 
-$error=1;
-
-if(isset($_POST['login']) && $_SESSION['logIn'] == 0) {	
-  $user_name = mysqli_real_escape_string($mysqli, $_POST['user_name']);
-  $password = mysqli_real_escape_string($mysqli, $_POST['password']);
-
-    while($res = mysqli_fetch_array($result)) { 
-      if($res['admin_name'] == $user_name ){
-        if($res['password'] == $password){
-          echo "user logged in";
-          $_SESSION['logIn'] = 1;
-          $_SESSION['login_user'] = $user_name;
-          $error = 0;
-        }
-      break;
-      }
-    }
-        
-  if($error == 1 && $_SESSION['logIn'] == 0 ){
-        echo "User incorrect";
-  } 
-      $mysqli->close();
-}
-?>
 </div>
 
     <!--main div ends-->

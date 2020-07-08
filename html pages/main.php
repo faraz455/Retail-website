@@ -1,7 +1,3 @@
-<?php
-//including the database connection file
-include_once("connect.php");
-?>
 <!DOCTYPE html>
 <html>
 
@@ -9,7 +5,6 @@ include_once("connect.php");
     <title>Retail Property</title>
 </head>
 <body>
-  <div style="background-color: rgb(240, 238, 238); padding-bottom: 10%;"> 
 <?php
 require_once('navbar.php');
 ?>
