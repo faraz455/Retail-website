@@ -6,14 +6,10 @@ if(isset($_POST['Upload'])){
     $file_size = $_FILES['file']['size'];
     $file_temp_loc = $_FILES['file']['tmp_name'];
     $file_store = "upload/".$file_name;
-    $location = "../html pages/upload/".$file_name;
 
     if(move_uploaded_file($file_temp_loc,$file_store))
         {
-            echo $file_name;
-            echo $file_store;
             echo "<img src=".$file_store.">";
-            echo $location;
         }
 }
 

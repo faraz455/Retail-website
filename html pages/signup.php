@@ -7,7 +7,6 @@
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 <body>
-  <div style="background-color: rgb(240, 238, 238); padding-bottom: 10%;"> 
 <?php
 require_once('navbar.php');
 ?>
