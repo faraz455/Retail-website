@@ -10,7 +10,7 @@ require_once('navbar.php');
 
 $result = mysqli_query($mysqli, "SELECT * FROM trending_section"); 
 
-$price = array("1","1","1");
+$price = array(" "," "," ");
 $location = array(" "," "," ");
 $texts = array(" "," "," ");
 
@@ -25,7 +25,7 @@ $texts = array(" "," "," ");
 
 $result = mysqli_query($mysqli, "SELECT * FROM new_section"); 
 
-$n_price = array("1","1","1");
+$n_price = array(" "," "," ");
 $n_location = array(" "," "," ");
 $n_texts = array(" "," "," ");
 
@@ -52,7 +52,7 @@ $n_texts = array(" "," "," ");
      <?php echo ' <p class="card-text" style="text-align: justify">'.$texts[0].'</p>'; ?>
           </div>
           <div class="card-footer">
-          <?php echo '<small class="text-muted">Rs'.$price[0].'</small>' ?>
+          <?php echo '<small class="text-muted">Rs '.$price[0].'</small>' ?>
           </div>
         </div>
         <div class="card shadow" style="padding: 2%;">
@@ -67,7 +67,7 @@ $n_texts = array(" "," "," ");
           </div>
           <div class="card-footer">
 
-          <?php echo '<small class="text-muted">Rs'.$price[1].'</small>' ?>
+          <?php echo '<small class="text-muted">Rs '.$price[1].'</small>' ?>
             
           </div>
         </div>
@@ -83,7 +83,7 @@ $n_texts = array(" "," "," ");
           </div>
           <div class="card-footer">
 
-          <?php echo '<small class="text-muted">Rs'.$price[2].'</small>' ?>
+          <?php echo '<small class="text-muted">Rs '.$price[2].'</small>' ?>
             
           </div>
         </div>
@@ -103,7 +103,7 @@ $n_texts = array(" "," "," ");
    <?php echo ' <p class="card-text" style="text-align: justify">'.$n_texts[0].'</p>'; ?>
         </div>
         <div class="card-footer">
-        <?php echo '<small class="text-muted">Rs'.$n_price[0].'</small>' ?>
+        <?php echo '<small class="text-muted">Rs '.$n_price[0].'</small>' ?>
         </div>
       </div>
       <div class="card shadow" style="padding: 2%;">
@@ -118,7 +118,7 @@ $n_texts = array(" "," "," ");
         </div>
         <div class="card-footer">
 
-        <?php echo '<small class="text-muted">Rs'.$n_price[1].'</small>' ?>
+        <?php echo '<small class="text-muted">Rs '.$n_price[1].'</small>' ?>
           
         </div>
       </div>
@@ -134,7 +134,7 @@ $n_texts = array(" "," "," ");
         </div>
         <div class="card-footer">
 
-        <?php echo '<small class="text-muted">Rs'.$n_price[2].'</small>' ?>
+        <?php echo '<small class="text-muted">Rs '.$n_price[2].'</small>' ?>
           
         </div>
       </div>

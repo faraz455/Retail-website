@@ -91,7 +91,42 @@ ALTER TABLE `admin_info`
 --
 ALTER TABLE `user_info`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+
+
+CREATE TABLE `trending_section` (
+  `item_price` varchar(20) NOT NULL,
+  `item_loc` varchar(50) NOT NULL,
+  `item_text` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `trending_section`
+--
+
+INSERT INTO `trending_section` (`item_price`, `item_loc`, `item_text`) VALUES
+('7000', '../html pages/upload/pic1.jpg', 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'),
+('5000', '../html pages/upload/pic3.jpg', 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'),
+('7000', '../html pages/upload/pic2.jpg', 'Some quick example text to build on the card title and make up the bulk of the card\'s content.');
+
+
+CREATE TABLE `new_section` (
+  `item_price` varchar(20) NOT NULL,
+  `item_loc` varchar(50) NOT NULL,
+  `item_text` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `new_section`
+--
+
+INSERT INTO `new_section` (`item_price`, `item_loc`, `item_text`) VALUES
+('7000', '../html pages/upload/pic1.jpg', 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'),
+('5000', '../html pages/upload/pic3.jpg', 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'),
+('7000', '../html pages/upload/pic2.jpg', 'Some quick example text to build on the card title and make up the bulk of the card\'s content.');
+
 COMMIT;
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
