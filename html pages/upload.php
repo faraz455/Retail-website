@@ -13,11 +13,7 @@ if(isset($_POST['Upload'])){
         }
 }
 
-
-if(isset($_POST['display'])){
-    echo "<img src=".$location.">";}
 ?>
-
 
 <!DOCTYPE html>
 <html>
@@ -42,9 +38,6 @@ require_once('navbar.php');
 </p>
 <p> 
     <input type="submit" name="Upload" value="Upload image">
-</p>
-<p> 
-    <input type="submit" name="diplay" value="Display">
 </p>
 
 </form>

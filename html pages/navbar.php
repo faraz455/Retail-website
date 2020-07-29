@@ -50,7 +50,7 @@ include_once("connect.php");
             <?php 
             if ($_SESSION['logIn'] == 0)
             {echo'<li class="nav-item left3">
-                    <a class="nav-link" href="signup.php">Sign In</a>
+                    <a class="nav-link" href="signup.php">Sign up</a>
                 </li>
                 <li class="nav-item left4">
                     <a class="nav-link" href="login.php">Login</a>
